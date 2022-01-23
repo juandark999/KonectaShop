@@ -57,7 +57,7 @@ class Venta extends React.Component {
             if(datos.success == 1){
                 Swal.fire({
                     title: 'Compleado!',
-                    text: 'Producto creado exitosamente',
+                    text: 'Venta realizada exitosamente',
                     icon: 'success',
                     confirmButtonText: 'aceptar'
                   }).then(()=> {
