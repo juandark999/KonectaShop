@@ -16,7 +16,11 @@ class Listar extends React.Component {
         fetch(Api)
         .then(respuesta => respuesta.json())
         .then((datos) => {
-            this.setState({ datosCargados:true, productos:datos})
+            if(datos.length > 0){
+                this.setState({ datosCargados:true, productos:datos})
+            } else {
+                this.setState({ datosCargados:true, productos:[]})
+            }
         })
         .catch(console.log)
 
@@ -68,7 +72,8 @@ class Listar extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {productos.map(
+                        {
+                        productos.map(
                             (producto) => (
                                 <tr key={producto.id}>
                                     <td scope="row">{producto.id}</td>
