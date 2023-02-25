@@ -1,3 +1,3 @@
-const api = "http://localhost/api/";
+const api = "http://localhost/konecta/konecta_crud/api";
 
 export default api;
